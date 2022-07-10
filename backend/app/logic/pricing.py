@@ -15,18 +15,23 @@ DIFFERENTIATION_FACTOR : Dict[str, Dict[str, float]] ={
     },
     "RENAULT":{
         "DIESEL":80.0/100,
-        "ESSENCE":100.0/100
+        "ESSENCE":100.0/100 # guess as the value was not provided
     },
     "OTHER":{
         "ESSENCE":80.0/100,
-        "DIESEL":100.0/100
+        "DIESEL":100.0/100 # guess as the value was not provided
     }
 }
 
 def get_price(car:dict)->float:
     """Makes a price estimation of car based on its 'mileage' and its 'age'."""
 
-    return (car['mileage']*MILEAGE_COEFF + (CURRENT_YEAR-car['releaseYear'])*AGE_COEFF + ORIGIN)*DIFFERENTIATION_FACTOR[_get_brand_df(car)][_get_fuel_df(car)]
+    return (car['mileage']*MILEAGE_COEFF + (CURRENT_YEAR-car['releaseYear'])*AGE_COEFF + ORIGIN)*get_differentiation_factor(car)
+
+def get_differentiation_factor(car:dict)->float:
+    """Returns the appropriate differentiation factor"""
+
+    return DIFFERENTIATION_FACTOR[_get_brand_df(car)][_get_fuel_df(car)]
 
 def _get_brand_df(car:dict)->str:
     """Returns the brand name of a car mapped to the options available in DIFFERENTIATION_FACTOR"""

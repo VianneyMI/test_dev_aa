@@ -40,6 +40,8 @@
                 <li>Mise en production (si validé, sinon on recommence le cycle à l'étape 1 ou 3 en fonction des cas)</li>
             </ol>
         <li>Proposition d'amélioration</li>
+        <p>Voir backend.app package</p>
         <li>Testing</li>
+        <p>Voir backend.test package</p>
     </ol>
 </h3>
