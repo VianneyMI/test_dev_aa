@@ -24,3 +24,20 @@ class InputMatchingAll(BaseModel):
 
         anystr_lower = True # Coerces string to lowercase
                             # https://pydantic-docs.helpmanual.io/usage/model_config/
+
+class MockFilters(BaseModel):
+    """
+    Mock filters model
+    (Defined for testing purposes)
+
+    """
+    car : dict
+
+DUMMY_CAR = {
+    "brand" : "peugeot",
+    "model" : "401",
+    "releaseYear" : 1934,
+    "fuel" : "diesel",
+    "gearbox" : "manual",
+    "mileage" : 350000
+}
