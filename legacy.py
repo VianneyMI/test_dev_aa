@@ -60,6 +60,7 @@ async def estimate_market_price_from_fuzzy_input(
     estimationDate : datetime.date = datetime.datetime.today().date(),
 )-> float: # As reported by Pylint, the function is missing a docstring.
             # Unlike the previous example Config class, this docstring is critical to understand the code.
+            # The output typehint is a bit misleading as the function actually returns a dictionary
 
     matching_output = await matching.endpoints.match_all(
         inputMapping=carMetadata,
