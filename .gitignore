@@ -1,3 +1,7 @@
 venv
 .vscode
 .env
+.hypothesis
+.mypy_cache
+.pytest_cache
+__pycache__/
