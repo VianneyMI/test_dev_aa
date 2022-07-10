@@ -4,10 +4,12 @@
 
 from datetime import datetime, date
 
-from fastapi import Request
+from fastapi import Request, APIRouter
 
 from ...models.matching import InputMatchingAll
 
+router = APIRouter(tags=["matchiing"])
+@router.post("/matching")
 async def match_all(
     inputMapping : InputMatchingAll,
     request : Request,

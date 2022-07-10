@@ -17,7 +17,7 @@ router = APIRouter(
 
 
 @router.post(
-    "./fuzzy-price/linear-reg",
+    "/fuzzy-price/linear-reg",
     response_description="Estimate market price",
     response_model=OutputPricing
 )
