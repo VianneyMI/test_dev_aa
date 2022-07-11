@@ -78,3 +78,51 @@
         </ul>
      </p>
 </ul>
+
+<h2>
+    <ol>
+        <li>Développement d'un nouveau endpoint</li>
+    </ol>
+</h2>
+
+<p>Voir fichier sql_exercice.sql</p>
+
+<h2>
+    <ol>
+        <li>Echange technique</li>
+    </ol>
+</h2>
+
+<h3>Questions Git</h3>
+<ol>
+    <li>Changement de branche => git checkout branch_name</li>
+    <li>Git stash sert à mettre en cache des changements dans l'index mais non commit pour facilement passer d'une branche à l'autre sans avoir à commit. Git stash peut ainsi aussi servir à transférer des changements en cours d'une branch à l'autre. Mais attention au conflits !</li>
+    <li><a href="https://mviewerdoc.readthedocs.io/fr/latest/doc_contrib/git.html">Celui-ci</a> c'est un workflow assez standard et qui marche bien</li>
+<ol>
+
+<h3>Questions Docker</h3>
+<ol>
+    <li>Afficher tous les conteneurs docker => docker ps -a</li>
+    <li>Afficher toutes les images docker => docker images</li>
+    <li>Se connecter à un conteneur docker => docker exec container_name</li>
+    <li>docker rmi my_image => Supprime une image</li>
+    <li>Rôle d'un volume docker => Assurer la persistence des données</li>
+    <li>Docker compose => Au préalable il faut définir une "recette" dans un fichier yaml ensuite en fonction de la version de docker il faut utiliser la commande docker-compose up ou docker compose up</li>
+</ol>
+
+<h3>Questions Docker</h3>
+<p>Les tests unitaires servent à s'assurer que les différentes unités de codes fonctionnent, c'est-à-dire qu'elles ne contiennent pas d'erreurs flagrantes de syntaxe ou autre pouvant empêcher l'exécution par exemple. <br>
+Les test fonctionnels eux servent à s'assurer que le code remplit sa fonction. Par exemple, dans le cadre d'un un modèle de ML, on peut avoir un test unitaire qui s'assure que le modèle est capable de faire une prédiction. En revanche, un test fonctionnel lui s'assurera elle que la prédiction est correcte ou du moins vraisemblable </p>
+
+<h3>Questions gestionnaire de cache</h3>
+<p>J'ai déjà utilisé un gestionnaire de cache pour faire du rate limiting par exemple qui est un moyen parmi d'autre de se protéger du scraping</p>
+
+<h3>Questions Peer Review/Pull Request</h3>
+<ol>
+    <li>A quoi ça sert ?<li>
+    <p>Les Peer Review et les Pull Requests servent à améliorer la qualité du code et à la rendre plus robuste. Deux développeurs valent mieux qu'un et le fait d'avoir son code relu par un pair permet souvent d'identifier des bugs pernicieux ou de repérer des mauvaises structures (bad code smells). Relire le code de quelqu'un d'autre permet d'explorer des parties de la solution sur lesquelles on a pas l'habitude de travailler et par conséquent de s'approprier une plus grande partie du code source</p>
+    <li>Bonne pull request</li>
+    <p>C'est une pull request qui répond à un problème(bug, refactoring) ou au développement d'une fonctionnalité, qui est documenté (i.e la request est accompagné d'un message résumant ce qui a été fait et en cohérence avec l'historique des messages de commits). C'est une pull request qui vient accompagné de tests automatiques qui viennent couvrir les nouveaux pans de code développés et avec un reviewer désigné, le tout dans un timing adécuat</p>
+    <li>Bonne peer review</li>
+    <p>Une bonne peer review est une review qui identifie les points d'amélioration voir les points problématiques du code soumis et où le reviewer est bien veillant vis à vis de son collègue et commente le code en distinguant bien les bugs avérés, des bugs potentiels, les changements qu'il serait bien d'avoir des changements nécessaires </p>
+</ol>
