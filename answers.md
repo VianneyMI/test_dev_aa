@@ -79,10 +79,19 @@
      </p>
 </ul>
 
+<ol>
+    <h3>
+        Sécurité du backend
+    </h3>
+</ol>
+<p>Préconisations pour sécuriser le code source du backend: <br>
+Sécuriser le repo remote en mettant en place une politique IAM stricte (i.e bien distinguer ceux qui à quel droit sur le repo remote) et mettre en place une authentification à deux facteurs pour accéder aux remotes.
+Il s'agit aussi de contrôler dans la mesure du possible l'environnement de développement local.
+</p>
+
 <h2>
     <ol>
-        <li>Développement d'un nouveau endpoint</li>
-    </ol>
+        <li>Développement  SQL </p>
 </h2>
 
 <p>Voir fichier sql_exercice.sql</p>
